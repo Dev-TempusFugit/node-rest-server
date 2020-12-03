@@ -36,8 +36,6 @@ app.get('/usuario', verificaToken,(req, res) => {
 
             })
         })
-
-
 });
   
 app.post('/usuario',[verificaToken, verificaAdminRole],(req, res) =>{
@@ -64,7 +62,6 @@ app.post('/usuario',[verificaToken, verificaAdminRole],(req, res) =>{
                 err
             })
         })
-
 });
 
 app.put('/usuario/:id', [verificaToken, verificaAdminRole],(req, res) =>{
@@ -138,6 +135,6 @@ app.delete('/usuario/:id',[verificaToken, verificaAdminRole],(req, res) =>{
 
     });
 
-  
+    
 
 module.exports = app;
